@@ -1,16 +1,16 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "codytengan.github.io",
-    "section": "",
-    "text": "This is a Quarto website. Hello\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Resume",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Hi this I just a page for my resume. I am still quite inexperienced but I hope to have the opportunities to fill it out later on down the road."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Cody Tengan",
+    "section": "",
+    "text": "Hey, my name is Cody Tengan. I am second year student at Chaminade University majoring in both Computer and Data Science. I am currently looking for any internship that I can get so if you know of one please let me know."
   }
 ]
