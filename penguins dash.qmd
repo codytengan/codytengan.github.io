@@ -1,0 +1,34 @@
+---
+title: "Palmer Penguin DaSHBoard"
+author: "cody tengan"
+format: dashboard
+---
+
+```{r echo=FALSE}
+library(tidyverse)
+library(plotly)
+library(janitor)
+
+penguins <- read.csv("penguins_lter.csv")
+view(penguins)
+
+penguins <- penguins %>%
+  clean_names()
+
+
+ggplot(data = penguins, aes(x = island, y = culmen_depth_mm)) + 
+  geom_bar(stat = "identity")
+
+```
+
+```{r echo=FALSE}
+mass_by_flipper <- ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species, shape = island)) +
+  geom_point() +
+  theme_bw() +
+  scale_color_viridis_d() +
+   labs(title = "Palmer Penguins, Flipper Length & Body Mass",
+       x = "Flipper Length (mm)",
+       y = "Body Mass (g)")
+
+ggplotly(mass_by_flipper)
+```

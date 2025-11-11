@@ -1,11 +1,13 @@
 ---
-title: "codytengan.github.io"
+title: "Cody Tengan"
+image: Camera Roll/IMG_7942.HEIC
+about: 
+  template: jolla
+  image-shape: rounded
+  image-width: 17em
+  links:  
+  - text: Email
+    href: ctengan05@gmail.com
 ---
 
-This is a Quarto website. Hello
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+Hey, my name is Cody Tengan. I am  second year student at Chaminade University majoring in both Computer and Data Science. I am currently looking for any internship that I can get so if you know of one please let me know.

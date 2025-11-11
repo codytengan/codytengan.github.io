@@ -8,8 +8,13 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-
+      - href: about.qmd
+        text: Resume
+      - href: penguins dash.qmd
+        text: Dashboard
+      - icon: github
+        href: https://github.com/codytengan
+        target: plank
 format:
   html:
     theme:

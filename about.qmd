@@ -1,9 +1,10 @@
 ---
-title: "About"
+title: "Resume"
+image: Camera Roll/cody tengan.jpg
+about: 
+  template: jolla
+  image-shape: rectangle
+  image-width: 17em
 ---
 
-About this site
-
-```{r}
-1 + 1
-```
+Hi this I just a page for my resume. I am still quite inexperienced but I hope to have the opportunities to fill it out later on down the road.
