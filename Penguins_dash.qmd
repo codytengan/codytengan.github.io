@@ -1,0 +1,67 @@
+---
+title: "Penguin DashBoard"
+author: "cody tengan"
+format: dashboard
+---
+
+```{r echo=FALSE}
+options(repos = c(CRAN = "https://cloud.r-project.org"))
+install.packages("ggplot2")
+install.packages("palmerpenguins") 
+install.packages("janitor") 
+install.packages("skimr") 
+install.packages("plotly")
+
+
+library(tidyverse) 
+library(here)
+library(palmerpenguins)
+library(janitor)
+library(plotly)
+
+penguins <- read_csv(here("penguins_lter.csv"))
+
+penguins <- penguins %>% 
+  clean_names()
+view(penguins)
+
+```
+
+```{r echo=FALSE}
+
+ggplot(data = penguins, aes(x = flipper_length_mm, fill = species)) +
+  geom_histogram() +
+  theme_bw() + 
+  scale_fill_viridis_d(option="A") + # try adding option = "A", "C", "E", etc. These also have names! See documentation.
+  labs(title = "Palmer Penguins, Distribution of Flipper Length",
+       subtitle = "3 penguin species observed on three islands in the Palmer Archipelago, Antarctica",
+       x = "Flipper Length (mm)",
+       y = "Number of Penguins")
+
+
+```
+
+```{r echo=FALSE}
+x=ggplot(data = penguins, aes(x = culmen_depth_mm, color = species)) +
+  geom_histogram() +
+  theme_bw() + 
+  scale_fill_viridis_d(option="A") + 
+  labs(title = "Palmer Penguins, Distribution of culmen depth",
+       subtitle = "3 penguin species observed on three islands in the Palmer Archipelago, Antarctica",
+       x = "culmen depth (mm)",
+       y = "Number of Penguins")
+ggplotly(x)
+```
+
+```{r echo=FALSE}
+
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species, shape = island)) +
+  geom_point() +
+  theme_bw() +
+  scale_color_viridis_d() +
+  facet_wrap(~sex) + # here is where we designate faceting!
+   labs(title = "Palmer Penguins, Flipper Length & Body Mass",
+       x = "flipper length (mm)",
+       y = "body mass (g)")
+
+```
